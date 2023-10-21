@@ -95,13 +95,23 @@ nav a:focus,nav a:hover{
   border: solid 3px rgb(255, 255, 255);
 }
 
-#skip{
+#skip {
   position: absolute;
   left: -100px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }
-#skip:focus{
-  left: 100px;
+
+#skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
 }
+
 .current_page{
   color: beige;
   background-color: rgb(160, 226, 160);
@@ -115,7 +125,6 @@ span{
       background-color: rgb(255, 254, 254);
   }
 }
-
 
 img:hover{
   transform: scale(1.1);
