@@ -5,11 +5,6 @@
   color: #FF85A2; 
 }
 
-body {
-  background-color: #FEFBEA;
-  color: rgb(183, 183, 183);
-}
-
 h1 {
   font-size: 3em;
   font-family: 'Poppins', sans-serif;
@@ -66,6 +61,12 @@ img{
 
 p,span,li{
   line-height: 2;
+  font-size: 18px; 
+  
+
+}
+p {
+  font-size: 18px; 
 }
 
 nav {
@@ -114,7 +115,7 @@ nav a:focus,nav a:hover{
 
 .current_page{
   color: beige;
-  background-color: rgb(160, 226, 160);
+ 
 }
 span{
   display: block;
@@ -122,7 +123,7 @@ span{
 
 @media screen and (min-width: 680px) {
   *{
-      background-color: rgb(255, 254, 254);
+      /* background-color: rgb(255, 254, 254); */
   }
 }
 
@@ -133,4 +134,65 @@ img:hover{
   img[src$=".gif"] {
       display: none;
   }
+}
+.big-image {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+.big-image img {
+  width: 400px; 
+  height: 300px; 
+  object-fit: cover; 
+}
+
+
+
+figcaption {
+  font-size: 14px; 
+}
+
+body {
+  background-color: #efebd5;
+  color: rgb(183, 183, 183);
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #614848;
+}
+
+.dark-mode {
+  background-color: rgb(68, 67, 68);
+  color: rgb(31, 31, 31);
+}
+
+#dark-mode-toggle {
+  background-color: #0d1217; 
+  color: #fff;
+  border: none; 
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0;
+  width: fit-content;
+
+}
+
+#dark-mode-toggle:hover {
+  background-color: #8d8c8c;
+}
+
+#scroll-to-top {
+  position: fixed;
+  top: 20px; 
+  right: 20px; 
+  background-color: #b5519c;
+  color: #fff;
+  border: none;
+  border-radius: 40%;
+  padding: 10px;
+  cursor: pointer;
 }
