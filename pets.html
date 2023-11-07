@@ -11,6 +11,8 @@
     <a href="#main" id="skip">Skip to Main Content</a>
     <header>
         <h1>Pets</h1>
+        <button id="dark-mode-toggle">Dark Mode</button>
+        <button id="scroll-to-top">Scroll to Top</button>
     </header>
     <nav>
         <ul>
@@ -211,6 +213,35 @@
         <div></div>
         <div></div>
     </main>
-    
+    <script>
+        const darkModeToggle = document.getElementById("dark-mode-toggle");
+        const body = document.body;
+      
+        darkModeToggle.addEventListener("click", () => {
+          body.classList.toggle("dark-mode");
+        });
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const scrollToTopButton = document.getElementById("scroll-to-top");
+      const content = document.getElementById("content");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+          scrollToTopButton.style.display = "block";
+        } else {
+          scrollToTopButton.style.display = "none";
+        }
+      });
+
+      scrollToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    });
+</script>
 </body>
 </html>

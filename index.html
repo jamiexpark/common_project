@@ -310,7 +310,6 @@
       const scrollToTopButton = document.getElementById("scroll-to-top");
       const content = document.getElementById("content");
 
-      // Show/hide the button based on the scroll position
       window.addEventListener("scroll", () => {
         if (window.scrollY > 200) {
           scrollToTopButton.style.display = "block";
@@ -319,11 +318,10 @@
         }
       });
 
-      // Scroll to the top when the button is clicked
       scrollToTopButton.addEventListener("click", () => {
         window.scrollTo({
           top: 0,
-          behavior: "smooth", // Smooth scrolling animation
+          behavior: "smooth",
         });
       });
     });
