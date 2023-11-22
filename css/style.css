@@ -1,28 +1,28 @@
 
 * {
-  font-family: 'Comic Sans MS', cursive;
+  font-family: 'Roboto', sans-serif;
   font-size: 24px;
-  color: #FF85A2; 
+  color: #5e699d; 
 }
 
 h1 {
   font-size: 3em;
-  font-family: 'Poppins', sans-serif;
-  color: #FF85A2; 
+  font-family: 'Roboto', sans-serif;
+  color: #d80000; 
   text-align: center;
 }
 
 h2 {
   font-size: 2em;
-  font-family: 'Quicksand', sans-serif;
-  color: #FFB37D; 
+  font-family: 'Roboto', sans-serif;
+  color: #000000; 
   text-align: center;
 }
 
 h3 {
   font-size: 2em;
-  font-family: 'Lobster', cursive;
-  color: #b4c4ab; 
+  font-family: 'Roboto', sans-serif;
+  color: #68795e; 
 }
 
 h1, h2, h3 {
@@ -43,6 +43,8 @@ img{
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
+  padding-right: 10%;
+  padding-left: 10%;
 }
 
 .edit_images img, .edit_images img {
@@ -67,6 +69,9 @@ p,span,li{
 }
 p {
   font-size: 18px; 
+  padding-left: 7%;
+  padding-right: 7%;
+
 }
 
 nav {
@@ -147,19 +152,23 @@ img:hover{
   object-fit: cover; 
 }
 
-
-
 figcaption {
   font-size: 14px; 
 }
 
 body {
-  background-color: #efebd5;
+  /* background-color: #efebd5; */
+  background-image: url('/aura.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: 'Roboto', sans-serif;
   color: rgb(183, 183, 183);
 }
 
 body.dark-mode {
   background-color: #121212;
+  background-image: url('images/cat.jpg');
   color: #614848;
 }
 
@@ -196,3 +205,50 @@ body.dark-mode {
   padding: 10px;
   cursor: pointer;
 }
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+#current {
+  color: rgb(90, 0, 64);
+  font-weight: bold;
+  font-size: large;
+}
+    /* Default style for mobile view */
+.responsive_images {
+      display: grid;
+      grid-template-columns: 1fr; /* One column */
+        flex-direction: column;
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Tablet view */
+@media (min-width: 700px) {
+  .responsive_images {
+      /* display: grid; */
+      grid-template-columns: repeat(auto-fill, minmax(calc(25% - 20px), 1fr)); /* Adjust width and gap as needed */
+      gap: 20px;
+  }
+}
+
+
+    /* Desktop view */
+ @media (min-width:868px) {
+        .responsive_images {
+            /* display: grid; */
+
+            grid-template-columns: repeat(auto-fill, minmax(calc(50% - 10px), 1fr)); /* 2x2 grid, or 2x1 for 3 images */
+            gap: 20px;
+        }
+
+        .responsive_images img {
+          width: 100%; /* Images take the full width of the container */
+          height: auto;
+          max-width: 400px; /* Set a maximum width for larger images */
+          border-radius: 8px; /* Optional: Add border radius for rounded corners */
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+      }
+    }
+
