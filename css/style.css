@@ -158,7 +158,7 @@ figcaption {
 
 body {
   /* background-color: #efebd5; */
-  background-image: url('images/aura.jpg');
+  background-image: url('../images/aura.jpg');
   background-size: cover; 
   background-repeat: no-repeat;
   background-position: center center;
@@ -215,38 +215,48 @@ nav a:hover {
   font-weight: bold;
   font-size: large;
 }
-    /* Default style for mobile view */
+   
 .responsive_images {
-      display: grid;
-      grid-template-columns: 1fr; /* One column */
-        flex-direction: column;
-        padding-left: 10px;
-        margin-bottom: 10px;
-    }
+  display: grid;
+  grid-template-columns: 1fr;
+  flex-direction: column;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
 
-    /* Tablet view */
 @media (min-width: 700px) {
   .responsive_images {
-      /* display: grid; */
-      grid-template-columns: repeat(auto-fill, minmax(calc(25% - 20px), 1fr)); /* Adjust width and gap as needed */
-      gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(calc(25% - 20px), 1fr));
+    gap: 20px;
   }
 }
 
+@media (min-width: 868px) {
+  .responsive_images {
+    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 10px), 1fr));
+    gap: 20px;
+  }
 
- @media (min-width:868px) {
-        .responsive_images {
-            /* display: grid; */
+  .responsive_images figure {
+    position: relative;
+  }
 
-            grid-template-columns: repeat(auto-fill, minmax(calc(50% - 10px), 1fr)); /* 2x2 grid, or 2x1 for 3 images */
-            gap: 20px;
-        }
-        .responsive_images img {
-          width: 100%; /* Images take the full width of the container */
-          height: auto;
-          max-width: 400px; /* Set a maximum width for larger images */
-          border-radius: 8px; /* Optional: Add border radius for rounded corners */
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
-      }
-    }
+  .responsive_images img,
+  .responsive_images video {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
 
+  .responsive_images figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+  }
+}
